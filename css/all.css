@@ -209,6 +209,9 @@ a {
   background: #EAF0ED;
   font-weight: bold;
 }
+.card-list .cart a {
+  color: #3F5D45;
+}
 
 .paginate {
   display: -webkit-box;

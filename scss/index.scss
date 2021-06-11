@@ -116,6 +116,10 @@ a{
         line-height: 65px;
         background: $sub-color;
         font-weight: bold;
+
+        a{
+            color: $main-color;
+        }
     }
 }
 .paginate{
