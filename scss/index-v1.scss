@@ -1,0 +1,145 @@
+body{
+    color: $main-color;
+}
+a{
+    text-decoration: none;
+    color: $sub-color
+}
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    h1 a img{
+        width: 220px;
+    }
+}
+.menu{
+    display: flex;
+    li a{
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-right: 30px;
+        padding-left: 30px;
+        display: block;
+        color: $main-color;
+        &:hover{
+            background: $main-color;
+            color: $sub-color;
+        }
+    }
+}
+.banner{
+    margin-bottom: 60px;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.aside{
+    width: 300px;
+    text-align: center;
+    line-height: 65px;
+    font-weight: bold;
+    li{
+        border: 1px solid $sub-color;
+        margin-bottom: -1px;
+    }
+    h2{
+        font-size: $large-font-size;
+        background: $main-color;
+        color: $sub-color;
+    }
+    a{
+        display: block;
+        color: $main-color;
+        &:hover{
+            background: $sub-color;
+        }
+    }
+}
+.product-card{
+    width: 620px;
+}
+.card-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li{
+        width: 300px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .tag{
+        position: absolute;
+        left: 20px;
+        top: 0px;
+        background: $main-color;
+        color: $sub-color;
+        padding: 10px;
+        writing-mode:vertical-rl;
+        letter-spacing: 5px;
+    }
+    .heart{
+        position: absolute;
+        right: 22px;
+        top: 10px;
+        font-size: $large-font-size;
+    }
+    img{
+        display: block;
+    }
+    .detail{
+        display: flex;
+        border-right: 1px solid $sub-color;
+        border-left: 1px solid $sub-color;
+        border-bottom: 1px solid $sub-color;
+        text-align: center;
+        font-size: $medium-font-size;
+        line-height: 56px;
+        h2{
+            width: 173px;
+            border-right: 1px solid $sub-color;
+        }
+        span{
+            width: 137px;
+            font-weight: bold;
+        }
+    }
+    .cart{
+        font-size: $large-font-size;
+        text-align: center;
+        line-height: 65px;
+        background: $sub-color;
+        font-weight: bold;
+
+        a{
+            color: $main-color;
+        }
+    }
+}
+.paginate{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    .paginate-list{
+        display: flex;
+        a{
+            display: block;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border: 1px solid $sub-color;
+            width: 60px;
+            color: $main-color;
+            text-align: center;
+            &:hover{
+                color: $sub-color;
+                background: $main-color;
+            }
+        }
+    }
+}

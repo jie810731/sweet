@@ -1,145 +1,257 @@
 body{
     color: $main-color;
 }
-a{
-    text-decoration: none;
-    color: $sub-color
-}
-.container{
-    max-width: 940px;
-    margin: 0 auto;
-}
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0px;
-    h1 a img{
-        width: 220px;
+    img{
+        max-width: 220px;
     }
-}
-.menu{
-    display: flex;
-    li a{
-        padding-top: 10px;
-        padding-bottom: 8px;
-        padding-right: 30px;
-        padding-left: 30px;
-        display: block;
-        color: $main-color;
-        &:hover{
-            background: $main-color;
-            color: $sub-color;
+    .menu{
+        display: flex;
+        a{
+            display: block;
+            padding: 8px 30px;
+            color: $main-color;
+            &:hover{
+                background: $main-color;
+                color: $white;
+            }
         }
     }
 }
 .banner{
-    margin-bottom: 60px;
-}
-.main{
-    display: flex;
-    justify-content: space-between;
-}
-.aside{
-    width: 300px;
-    text-align: center;
-    line-height: 65px;
-    font-weight: bold;
-    li{
-        border: 1px solid $sub-color;
-        margin-bottom: -1px;
-    }
-    h2{
-        font-size: $large-font-size;
-        background: $main-color;
-        color: $sub-color;
-    }
-    a{
-        display: block;
-        color: $main-color;
-        &:hover{
-            background: $sub-color;
-        }
-    }
-}
-.product-card{
-    width: 620px;
-}
-.card-list{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    li{
-        width: 300px;
-        position: relative;
-        margin-bottom: 20px;
-    }
-    .tag{
-        position: absolute;
-        left: 20px;
-        top: 0px;
-        background: $main-color;
-        color: $sub-color;
-        padding: 10px;
-        writing-mode:vertical-rl;
-        letter-spacing: 5px;
-    }
-    .heart{
-        position: absolute;
-        right: 22px;
-        top: 10px;
-        font-size: $large-font-size;
-    }
     img{
+        width: 100%;
+        height: 496px;
         display: block;
-    }
-    .detail{
-        display: flex;
-        border-right: 1px solid $sub-color;
-        border-left: 1px solid $sub-color;
-        border-bottom: 1px solid $sub-color;
-        text-align: center;
-        font-size: $medium-font-size;
-        line-height: 56px;
-        h2{
-            width: 173px;
-            border-right: 1px solid $sub-color;
-        }
-        span{
-            width: 137px;
-            font-weight: bold;
-        }
-    }
-    .cart{
-        font-size: $large-font-size;
-        text-align: center;
-        line-height: 65px;
-        background: $sub-color;
-        font-weight: bold;
-
-        a{
-            color: $main-color;
-        }
+        object-fit: cover;
     }
 }
-.paginate{
+.product-category{
     display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-    .paginate-list{
+    justify-content: center;
+    .product-category-list{
+        position: relative;
+        top:-90px;
         display: flex;
+        li{
+            background: $main-color;
+            writing-mode: vertical-lr;
+            font-size: $large-font-size;
+            letter-spacing: 5px;
+            margin-right: 1px;
+        }
         a{
+            padding: 62px 120px;
             display: block;
-            padding-top: 16px;
-            padding-bottom: 16px;
-            border: 1px solid $sub-color;
-            width: 60px;
-            color: $main-color;
-            text-align: center;
+            color: $white;
             &:hover{
-                color: $sub-color;
-                background: $main-color;
+                background: $yellow;
+                color: $main-color;
             }
         }
     }
+}
+.product-story{
+    .product-dircript{
+        margin-bottom: 105px;
+        background: $sub-color;
+        height: 420px;
+        .product-dircript-content{
+            display: flex;
+            justify-content: space-between;
+            img{
+                position: relative;
+                top: -20px;
+                width: 460px;
+                height: 460px;
+                object-fit: cover;
+            }
+        }
+        .product-dircript-content-introduction{
+            display: flex;
+            justify-content: space-between;
+            width: 425px;
+            div{
+                display: flex;
+            }
+            p{
+                margin-top: 70px;
+                height: 280px;
+                writing-mode: vertical-rl;
+                line-height: 40px;
+            }
+            img{
+                max-width: 90px;
+                height: auto;
+                object-fit: contain;
+                object-position: top;
+            }
+        }
+        &:nth-child(even){
+           .product-dircript-content{
+                flex-direction: row-reverse;
+            } 
+        }
+    }
+}
+.copy-writing{
+    margin-top: -10px;
+    margin-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    writing-mode: vertical-rl;
+    h2{
+        font-weight: bold;
+        line-height: 1.5em;
+        font-size: 32px;
+        text-align: left;
+        span{
+            display: block;
+            margin-top: 0.5em;
+        }
+    }
+}
+.product-cards{
+    .product-card-list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        li{
+            position: relative;
+            img{
+                width: 300px;
+                height: 315px;
+            }
+        }
+        .tag{
+            position: absolute;
+            top:0px;
+            left: 20px;
+            padding: 10px;
+            writing-mode: vertical-rl;
+            color: $white;
+            background: $main-color;
+            letter-spacing: 5px;
+        }
+        .add-heart{
+            position: absolute;
+            top:20px;
+            right: 22px;
+        }
+        .name-price{
+            display: flex;
+            border-right: 1px solid $sub-color;
+            border-left: 1px solid $sub-color;
+            border-bottom: 1px solid $sub-color;
+            line-height: 56px;
+            font-size: $medium-font-size;
+            text-align: center;
+            h2{
+                width: 173px;
+                border-right: 1px solid $sub-color;
+            }
+            span{
+                width: 127px;
+                font-weight: bold;
+            }
+        }
+        .add-cart{
+            text-align: center;
+            line-height: 65px;
+            background: $sub-color;
+            font-weight: bold;
+            a{
+                display: block;
+                color: $main-color;
+            }
+        }
+    }
+}
+.footer{
+    .footer-head{
+        background: $main-color;
+        padding: 0px 122px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 116px;
+        h2{
+            margin-left: 20px;
+            font-size: $large-font-size;
+            color: $sub-color;
+        }
+        .footer-head-logo{
+            display: flex;
+            align-items: center;
+        }
+        .footer-head-mail{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 380px;
+            background: $sub-color;
+            font-size: 24px;
+            color: $main-color;
+            i{
+                padding: 16px 20px;
+            }
+            .arrow-area{
+                width: 64px;
+                background: $yellow;
+            }
+        }
+    }
+    .footer-content{
+        padding: 0px 122px;
+        background: $sub-color;
+        .footer-content-middle{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 27px;
+            padding-bottom: 30px;
+            .footer-content-middle-left{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                img{
+                    width: 127px;
+                    height: 26px;
+                }
+                p{
+                    line-height: $large-font-size;
+                }
+            }
+            h2{
+                margin-top: -0.5em;
+                writing-mode: vertical-rl;
+                font-size: $large-font-size;
+                line-height: 1.5em;
+                font-weight: bold;
+                letter-spacing: 6px;
+                .new-line{
+                    margin-top: 0.5em;
+                    display: block;
+                }
+            }
+        }
+        .footer-content-contact{
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .footer-content-contact-social-media{
+                img{
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    
 }
