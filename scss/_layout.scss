@@ -3,9 +3,31 @@
     padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
-    &__logo{
+    align-items: center;
+    @include mobile{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 36px;
+    }
+    &__mobileMenu{
+        font-size: 18px;
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+    &__logoIcon{
+        max-width: 40px;
+        margin-right: 8px;
+        @include mobile{
+            display: none;
+        }
+    }
+    &__logoName{
         max-width: 220px;
-        display: block;
+        @include mobile{
+            max-width: 114px;
+        }
     }
     &__menu{
         display: flex;
@@ -20,6 +42,15 @@
                 background:$main-color;
                 color: $white;
             }
+            @include mobile{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        @include mobile{
+            li:nth-child(-n+3){
+                display: none;
+            }
         }
     }
 }
@@ -32,6 +63,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mobile{
+            flex-direction: column;
+            padding: 30px;
+        }
         &__logo{
             display: flex;
             font-size: $large-font-size;
@@ -39,6 +74,9 @@
             img{
                 width: 40px;
                 margin-right: 20px;
+            }
+            @include mobile{
+                margin-bottom: 30px;
             }
         }
         &__form{
@@ -49,6 +87,9 @@
             background:$white;
             color: $main-color;
             font-size: $large-font-size;
+            @include mobile{
+                width: 315px;
+            }
             input{
                 width: 50%;
                 border: 1px solid $white;
@@ -65,6 +106,9 @@
         padding: 30px 120px;
         display: flex;
         justify-content: space-between;
+        @include mobile{
+            padding: 38px 30px;  
+        }
         &__info{
             display: flex;
             flex-direction: column;
@@ -72,9 +116,15 @@
             line-height: $large-font-size;
             img{
                 max-width: 171px;
+                @include mobile{
+                    margin-bottom: 39px;
+                }
             }
             &__wording{
                 max-width: 60px;
+                @include mobile{
+                    display: none;  
+                }
             }
         }
         
@@ -84,10 +134,18 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        @include mobile{
+            padding: 37px 30px 30px 30px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
         &__media{
             img{
                 width: 32px;
                 margin-right: 8px;
+            }
+            @include mobile{
+                margin-bottom: 30px;
             }
         }
     }

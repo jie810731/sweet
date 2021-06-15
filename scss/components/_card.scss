@@ -1,6 +1,9 @@
 .c-card{
     position: relative;
     width: 300px;
+    @include mobile{
+        width: 315px;
+    }
     &__tag{
         position:absolute;
         left: 20px;

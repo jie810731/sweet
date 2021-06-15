@@ -2,10 +2,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+    @include mobile{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     &__aside{
         width: 300px;
         font-size: $large-font-size;
         text-align: center;
+        @include mobile{
+            width: 100%;
+        }
         &__list{ 
             li{ 
                 margin-bottom: -1px;
@@ -22,12 +29,18 @@
     }
     &__cards{
         width: 620px;
+        @include mobile{
+            width: 315px;
+        }
         &__cardList{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             li{
                 margin-bottom: 20px;
+                @include mobile{
+                    margin-bottom: 30px;
+                }
             }
         }
         &__paginate{
