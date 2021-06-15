@@ -1,0 +1,17 @@
+.u-primaryBackground{
+    background: $main-color;
+    color: $white;
+}
+.u-secondaryBackground{
+    background: $secondary-color;
+    color: $main-color;
+}
+.u-thirdBackground{
+    background: $yellow;
+}
+.u-vericalWritingMode{
+    writing-mode: vertical-rl;
+}
+.u-fontBold{
+    font-weight: bold;
+}

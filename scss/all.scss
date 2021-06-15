@@ -1,16 +1,16 @@
 @import "variable";
 @import "reset";
-@import "index";
-@import "index-v1";
+@import "rebote";
+@import "base";
+@import "layout";
+@import "mixin";
+@import "util";
+@import "components/card";
 
-a{
-    text-decoration: none;
-    color: $sub-color
-}
-.container{
-    max-width: 940px;
-    margin: 0 auto;
-}
-.no-letter-spacing{
-    letter-spacing: 0px;
+//single page
+@import "index";
+@import "pages/product";
+
+.bold{
+    font-weight: bold;
 }

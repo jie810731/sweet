@@ -1,0 +1,40 @@
+.c-card{
+    position: relative;
+    width: 300px;
+    &__tag{
+        position:absolute;
+        left: 20px;
+        padding: 10px;
+        letter-spacing: 4px;
+    }
+    &__favorite{
+        top: 19px;
+        right: 22px;
+        position:absolute;
+    }
+    img{
+        max-width: 100%;
+        display: block;
+    }
+    &__content{
+        display: flex;
+        border-left: 1px solid $secondary-color;
+        border-right: 1px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;
+        font-size: $medium-font-size;
+        line-height: 56px;
+        text-align: center;
+        &__title{
+            width: 58%;
+            border-right: 1px solid  $secondary-color;
+        }
+        &__subTitle{
+            width: 42%;
+        }
+    }
+    &__addCar{
+        line-height: 65px;
+        background: $secondary-color;
+        text-align: center;
+    }
+}

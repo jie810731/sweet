@@ -1,0 +1,94 @@
+.l-header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+        max-width: 220px;
+        display: block;
+    }
+    &__menu{
+        display: flex;
+        text-align: center;
+        a{
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 8px;
+            padding-left: 30px;
+            padding-right: 30px;
+            &:hover{
+                background:$main-color;
+                color: $white;
+            }
+        }
+    }
+}
+.l-banner{
+    margin-bottom: 60px;
+}
+.l-footer{
+    &__subscript{
+        padding: 30px 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__logo{
+            display: flex;
+            font-size: $large-font-size;
+            line-height: 40px;
+            img{
+                width: 40px;
+                margin-right: 20px;
+            }
+        }
+        &__form{
+            width: 380px;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            background:$white;
+            color: $main-color;
+            font-size: $large-font-size;
+            input{
+                width: 50%;
+                border: 1px solid $white;
+            }
+            i{
+                margin-top: 16px;
+                margin-bottom: 16px;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
+    &__content{
+        padding: 30px 120px;
+        display: flex;
+        justify-content: space-between;
+        &__info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: $large-font-size;
+            img{
+                max-width: 171px;
+            }
+            &__wording{
+                max-width: 60px;
+            }
+        }
+        
+    }
+    &__bottom{
+        padding: 0px 120px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &__media{
+            img{
+                width: 32px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
