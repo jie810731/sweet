@@ -156,6 +156,10 @@ a {
   max-width: 100%;
 }
 
+.l-banner img {
+  display: block;
+}
+
 .l-footer__subscript {
   padding: 30px 120px;
   display: flex;
@@ -331,6 +335,12 @@ a {
   display: block;
 }
 
+@media (max-width: 767px) {
+  .c-card img {
+    width: 100%;
+  }
+}
+
 .c-card__content {
   display: flex;
   border-left: 1px solid #EAF0ED;
@@ -362,15 +372,44 @@ a {
   margin-bottom: -150px;
 }
 
+@media (max-width: 767px) {
+  .p-index-category {
+    top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
 .p-index-category__list {
   display: flex;
   justify-content: center;
 }
 
+.p-index-category__list__item {
+  width: 260px;
+  margin-right: 1px;
+}
+
+.p-index-category__list__item__link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  font-size: 24px;
+  letter-spacing: 6px;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .p-index-category__list__item__link {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
 .p-index-category__list .p-index-category__list__wording {
   margin-right: 1px;
   font-size: 24px;
-  padding: 62px 115px;
   letter-spacing: 6px;
 }
 
@@ -378,9 +417,21 @@ a {
   margin-top: 80px;
 }
 
+@media (max-width: 767px) {
+  .p-index-story {
+    margin-top: 0;
+  }
+}
+
 .p-index-story__row {
   background: #EAF0ED;
   margin-bottom: 105px;
+}
+
+@media (max-width: 767px) {
+  .p-index-story__row {
+    margin-bottom: 0px;
+  }
 }
 
 .p-index-story__row__section {
@@ -388,15 +439,53 @@ a {
   justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+  .p-index-story__row__section {
+    flex-direction: column;
+  }
+}
+
+.p-index-story__row__section__mobliePhoto {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .p-index-story__row__section__mobliePhoto {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .p-index-story__row__section__mobliePhoto img {
+    max-width: 196px;
+  }
+}
+
 .p-index-story__row__section__photo {
   margin-top: -20px;
   margin-bottom: -20px;
+}
+
+@media (max-width: 767px) {
+  .p-index-story__row__section__photo {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .p-index-story__row__section__photo img {
   width: 460px;
   height: 460px;
   object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .p-index-story__row__section__photo img {
+    max-width: 100%;
+    max-height: 250px;
+  }
 }
 
 .p-index-story__row__section__descript {
@@ -407,8 +496,30 @@ a {
   margin-right: 80px;
 }
 
+@media (max-width: 767px) {
+  .p-index-story__row__section__descript {
+    height: auto;
+    writing-mode: horizontal-tb;
+    padding: 30px;
+    margin-right: 0;
+  }
+}
+
 .p-index-story__row__section__descript p:nth-child(n+2) {
   margin-right: 64px;
+}
+
+@media (max-width: 767px) {
+  .p-index-story__row__section__descript p:nth-child(n+2) {
+    margin-right: 0;
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-index-story__row__section__title {
+    display: none;
+  }
 }
 
 .p-index-story__row__section__title img {
@@ -423,17 +534,58 @@ a {
   margin-bottom: 80px;
 }
 
+@media (max-width: 767px) {
+  .p-index-bannerTitle {
+    display: none;
+  }
+}
+
 .p-index-bannerTitle img {
   max-width: 90px;
+}
+
+.p-index-bannerTitleMobliePhoto {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .p-index-bannerTitleMobliePhoto {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .p-index-bannerTitleMobliePhoto img {
+    max-width: 226px;
+  }
 }
 
 .p-index-products {
   margin-bottom: 60px;
 }
 
+@media (max-width: 767px) {
+  .p-index-products {
+    margin-bottom: 30px;
+  }
+}
+
 .p-index-products__list {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .p-index-products__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-index-products__list li {
+    margin-bottom: 30px;
+  }
 }
 
 .p-product-main {

@@ -2,32 +2,84 @@
     position: relative;
     top:-150px;
     margin-bottom: -150px;
+    @include mobile{
+        top:0px;
+        margin-bottom:0px;
+    }
     &__list{
         display: flex;
         justify-content: center;
+        &__item{
+            width: 260px;
+            margin-right: 1px;
+            &__link{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding-top: 62px;
+                padding-bottom: 62px;
+                font-size: $large-font-size;
+                letter-spacing: 6px;
+                color: inherit;
+                @include mobile{
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
+            }
+        }
         .p-index-category__list__wording{
             margin-right: 1px;
             font-size: $large-font-size;
-            padding: 62px 115px;
             letter-spacing: 6px;
         }
     }
 }
 .p-index-story{
     margin-top: 80px;
+    @include mobile{
+        margin-top: 0;
+    }
     &__row{
         background: $secondary-color;
         margin-bottom: 105px;
+        @include mobile{
+            margin-bottom: 0px;
+        }
         &__section{
             display: flex;
             justify-content: space-between;
+            @include mobile{
+                flex-direction: column;
+            }
+            &__mobliePhoto{
+                display: none;
+                @include mobile{
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    img{
+                        max-width: 196px;
+                    }
+                }
+            }
             &__photo{
                 margin-top: -20px;
                 margin-bottom: -20px;
+                @include mobile{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                }
                 img{
                     width: 460px;
                     height: 460px;
                     object-fit: cover;
+                    @include mobile{
+                        max-width: 100%;
+                        max-height: 250px;
+                    }
                 }
             }
             &__descript{
@@ -36,11 +88,24 @@
                 padding-bottom: 70px;
                 line-height: 30px;
                 margin-right: 80px;
+                @include mobile{
+                    height: auto;
+                    writing-mode: horizontal-tb;
+                    padding: 30px;
+                    margin-right: 0;
+                }
                 & p:nth-child(n+2) {
                     margin-right: 64px;
+                    @include mobile{
+                        margin-right: 0;
+                        margin-top: 64px;
+                    }
                 }
             }
             &__title{
+                @include mobile{
+                    display: none;
+                }
                 img{
                     margin-top: -20px;
                     max-width:88px;
@@ -54,14 +119,41 @@
     justify-content: center;
     margin-top: -10px;
     margin-bottom: 80px;
+    @include mobile{
+        display: none;
+    }
     img{
         max-width: 90px;
     }
 }
+.p-index-bannerTitleMobliePhoto{
+    display: none;
+    @include mobile{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img{
+            max-width: 226px;
+        }
+    }
+}
 .p-index-products{
     margin-bottom: 60px;
+    @include mobile{
+        margin-bottom: 30px;
+    }
     &__list{
         display: flex;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+        }
+        li{
+            @include mobile{
+                margin-bottom: 30px;
+            }
+        }
     }
 }

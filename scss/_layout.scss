@@ -56,6 +56,9 @@
 }
 .l-banner{
     max-width: 100%;
+    img{
+        display: block;
+    }
 }
 .l-footer{
     &__subscript{
